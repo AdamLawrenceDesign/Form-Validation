@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />			<!-- Meta Data -->
+
+    <title>Form Validation | Javascript Repository</title>
+    
+    <link rel="shortcut icon" href="img/logo.png"> 								
+    <link rel="stylesheet" href="css/screen.css?v1.1" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,500italic|Open+Sans:400,300,700,600,300italic' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js?v1.1"></script>
+    <!-- <script type="text/javascript" src="../../jquery-1.7.2.min.js"></script> -->
+    <script type="text/javascript" src="js/formValidation.js"></script>
+    
+</head>
+
+<body>
+    
+    <header class="prm box-shadow ease_sd pattern">
+        <section class="align_ct">
+            <img id="header_logo" class="fl_lt m_l_left" src="svg/logo.svg?v1.1" alt="" />
+            <div class="clearfix"></div>
+        </section>
+    </header>																<!-- Header -->
+
+    <main class="bg_fff border_box">
+    	<section class="p_l border_box">
+            <form class="_70_m">
+            
+                <h1>Form Validation</h1>
+                <h2>Detect User Input</h2><!-- <img src="images/menu_school.jpg" style="display:inline-block;float:right;vertical-align:middle;width:2em;margin-top:0em;margin-right:.5em;" alt="" /> -->
+                
+                <div class="clearfix m_l_bottom m_l_top"></div>
+                
+                <div class="clearfix"></div>
+                
+               <div id="errorBlock" class="block_red txt_sm p_m m_l_top p_l_left p_l_right" style="display:none;">
+                    <p class="txt_sm"><b>NO MATCH - </b> We are unable to find a match for your query please check and re-submit.</p>
+               </div>
+                                                        
+               <label class="_20_m p_l_top p_m_bottom fl_lt"><span class="txt_sm">Given Name</span> <span style="color:#F00">*</span></label>
+               <span class="_50_m input_area m_l_top_break">
+                    <input type="text" id="given" class="required" data-type="text"/>
+                    <span class="input-icon"></span>
+               </span>
+
+               <div class="clearfix"></div>
+                        
+               <label class="_20_m p_l_top p_m_bottom"><span class="txt_sm">Surname</span> <span style="color:#F00">*</span></label>
+               <span class="_50_m input_area m_l_top_break error">
+                     <input type="text" id="surname" class="required" data-type="text"/>
+                     <span class="input-icon"></span>
+               </span> 
+
+               <div class="clearfix"></div>
+                
+               <label class="_20_m p_l_top p_m_bottom"><span class="txt_sm">Date of Birth</span> <span class="txt_red">*</span></label><!-- <span style="font-size:.7em">DAY / MONTH / YEAR</span> -->
+                        
+               <div class="_50_m m_l_top_break phone_txt">
+                
+                    <span class="input_area_select txt_sm" style="width:6em;display:inline-block">
+                        <select id="dobDay" class="custom-dropdown info" data-cart="hfDay" data-type="select">       
+                            <option value="0">Day</option>
+                        </select> 	
+                        <label class="icon-arrow_full_down border_box input-icon"></label> 
+                    </span>  
+                        
+                    <span class="input_area_select txt_sm" style="width:6em;display:inline-block">
+                        <select id="dobMonth" class="custom-dropdown info" data-cart="hfMonth" data-type="select">
+                            <option value="0">Month</option>
+                        </select>
+                        <label class="icon-arrow_full_down border_box input-icon"></label>
+                    </span>    
+                        
+                    <span class="input_area_select txt_sm" style="width:6em;display:inline-block">
+                        <select id="dobYear" class="custom-dropdown info" data-cart="hfYear" data-type="select">
+                            <option value="0">Year</option>
+                        </select>
+                        <label class="icon-arrow_full_down border_box input-icon"></label>
+                    </span>
+
+                </div>
+            
+               <div class="clearfix"></div>
+                 
+               <label class="_20_m p_l_top p_m_bottom"><span class="txt_sm">Phone Number</span> <span style="color:#F00">*</span></label>
+               <span class="_50_m input_area m_l_top_break error">
+                     <input type="text" id="phone" class="required" data-type="phone"/>
+                     <span class="input-icon"></span>
+               </span> 
+
+               <div class="clearfix"></div>
+                 
+               <label class="_20_m p_l_top p_m_bottom"><span class="txt_sm">Email Address</span> <span style="color:#F00">*</span></label>
+               <span class="_50_m input_area m_l_top_break error">
+                     <input type="text" id="email" class="required" data-type="email"/>
+                     <span class="input-icon"></span>
+               </span> 
+
+               <div class="clearfix"></div>
+               
+               <label class="_20_m p_l_top p_m_bottom"><span class="txt_sm">Confirm Email</span> <span style="color:#F00">*</span></label>
+               <span class="_50_m input_area m_l_top_break error">
+                     <input type="text" id="emailConfirm" class="required" data-type="emailMatch"/>
+                     <span class="input-icon"></span>
+               </span> 
+
+               <div class="clearfix"></div>
+               
+               <label class="_20_m p_l_top p_m_bottom"><span class="txt_sm">Your Message:</span> <span class="txt_red">*</span></label>
+               <span class="_50_m input_area m_l_top_break error">
+               		<textarea id="message" data-type="textarea"></textarea>
+                    <span class="input-icon"></span>
+                    <div class="clearfix"></div>
+               </span>
+               
+               <div class="clearfix"></div>
+               
+               <div id="errorMessage" class="p_l_top" style="display:none">
+               		<label class="_20_m p_l_top p_m_bottom"><span class="txt_sm">&nbsp;</span></label>
+                    <div class="block_red _50_m p_m_left p_m_right">
+                    	<p class="txt_xs"><b>ERROR - </b>There are errors with your form, please check inputs before proceeding.</p>
+                    </div>
+               </div>
+                        
+               <div class="clearfix"></div>
+               <label class="_20_m p_l_top p_m_bottom"><span class="txt_sm">&nbsp;</span></label>
+               <button id="submit" class="button_lt _50_m align_lt m_l_top">SUBMIT<span class="icon-checkmark2 fl_rt txt_fff"></span></button>
+            <div class="clearfix"></div>
+            </form>
+            <div class="clearfix" style="height:2em"></div>
+            <div class="clearfix"></div>
+        
+        </section>
+    </main>
+    
+    <div class="clearfix"></div>
+    <div class="clearfix" style="height:10em"></div>
+    
+</body>
+</html>
